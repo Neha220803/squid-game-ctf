@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenges | Squid Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-dark text-white">
+    
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">SQUID GAME CTF</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="challenges.html">Challenges</a></li>
+                    <li class="nav-item"><a class="nav-link" href="leaderboard.html">Leaderboard</a></li>
+                    <li class="nav-item"><button class="btn btn-dark">Sign Out</button></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Challenges Section -->
+    <div class="container">
+        <!-- Easy Challenges Section -->
+        <div class="challenge-section easy">
+            <h2 class="challenge-heading">Easy</h2>
+            <div class="cards-wrapper">
+                <div class="card" data-name="Easy 1" data-points="100" data-description="Solve this easy challenge by completing the task." data-level="Easy">Easy 1</div>
+                <div class="card" data-name="Easy 2" data-points="100" data-description="Solve this easy challenge by completing the task." data-level="Easy">Easy 2</div>
+                <div class="card" data-name="Easy 3" data-points="100" data-description="Solve this easy challenge by completing the task." data-level="Easy">Easy 3</div>
+                <div class="card" data-name="Easy 4" data-points="100" data-description="Solve this easy challenge by completing the task." data-level="Easy">Easy 4</div>
+                <div class="card" data-name="Easy 5" data-points="100" data-description="Solve this easy challenge by completing the task." data-level="Easy">Easy 5</div>
+                <div class="card" data-name="Easy 6" data-points="100" data-description="Solve this easy challenge by completing the task." data-level="Easy">Easy 6</div>
+                <div class="card" data-name="Easy 7" data-points="100" data-description="Solve this easy challenge by completing the task." data-level="Easy">Easy 7</div>
+            </div>
+        </div>
+    
+        <!-- Medium Challenges Section -->
+        <div class="challenge-section medium">
+            <h2 class="challenge-heading">Medium</h2>
+            <div class="cards-wrapper">
+                <div class="card" data-name="Medium 1" data-points="200" data-description="Solve this medium challenge by completing the task." data-level="Medium">Medium 1</div>
+                <div class="card" data-name="Medium 2" data-points="200" data-description="Solve this medium challenge by completing the task." data-level="Medium">Medium 2</div>
+                <div class="card" data-name="Medium 3" data-points="200" data-description="Solve this medium challenge by completing the task." data-level="Medium">Medium 3</div>
+                <div class="card" data-name="Medium 4" data-points="200" data-description="Solve this medium challenge by completing the task." data-level="Medium">Medium 4</div>
+                <div class="card" data-name="Medium 5" data-points="200" data-description="Solve this medium challenge by completing the task." data-level="Medium">Medium 5</div>
+                <div class="card" data-name="Medium 6" data-points="200" data-description="Solve this medium challenge by completing the task." data-level="Medium">Medium 6</div>
+                <div class="card" data-name="Medium 7" data-points="200" data-description="Solve this medium challenge by completing the task." data-level="Medium">Medium 7</div>
+            </div>
+        </div>
+    
+        <!-- Hard Challenge Section -->
+        <div class="challenge-section hard">
+            <h2 class="challenge-heading">Hard</h2>
+            <div class="cards-wrapper">
+                <div class="card" data-name="Hard 1" data-points="500" data-description="Solve this hard challenge by completing the task." data-level="Hard">Hard 1</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Challenge Modal -->
+    <div class="modal fade" id="challengeModal" tabindex="-1" aria-labelledby="challengeModalLabel" aria-hidden="true">
+        <div class="modal-dialog"> 
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="challengeModalLabel">Challenge Caption</h5>
+                    <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                </div>
+                <div class="modal-body">
+                 
+                    <h6 class="phrase">🔺 Welcome player,You have one chance. Will you play or walk away? .</h6>
+                    <h3 id="modalChallengeName">CHALLENGE NAME</h3>
+                    <h2 id="modalChallengePoints">100</h2>
+                    <p id="modalChallengeDescription">Description of the challenge goes here. This should explain the challenge and how to complete it.</p>
+                  
+                    <button class="btn btn-primary w-100 mb-3" id="viewHintsBtn">VIEW HINTS</button>
+                    <button class="btn btn-success w-100 mb-3" id="unlockHintBtn">UNLOCK HINT FOR 20 POINTS</button>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="challengeAnswer" placeholder="ENTER YOUR ANSWER HERE">
+                        <button class="btn btn-warning" id="submitButton" disabled>SUBMIT</button>
+                    </div>
+                    <div id="statusMessage" class="text-success mt-2" style="display: none;">
+                        Successful submission
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Function to handle challenge card click
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('click', () => {
+                const challengeName = card.getAttribute('data-name');
+                const challengePoints = card.getAttribute('data-points');
+                const challengeDescription = card.getAttribute('data-description');
+
+                // Set modal values dynamically
+                document.getElementById('modalChallengeName').textContent = challengeName;
+                document.getElementById('modalChallengePoints').textContent = 'score : ' + challengePoints;
+                document.getElementById('modalChallengeDescription').textContent = challengeDescription;
+
+                // Show the modal
+                new bootstrap.Modal(document.getElementById('challengeModal')).show();
+            });
+        });
+
+        // Enable submit button when user types an answer
+        document.getElementById('challengeAnswer').addEventListener('input', function() {
+            const submitButton = document.getElementById('submitButton');
+            submitButton.disabled = !this.value.trim(); // Disable button if input is empty
+        });
+
+        // Handle the submit button action
+        document.getElementById('submitButton').addEventListener('click', function() {
+            const statusMessage = document.getElementById('statusMessage');
+            statusMessage.style.display = 'block'; // Show "Already Solved" message
+            this.disabled = true; // Disable the submit button after submission
+            setTimeout(() => {
+                statusMessage.style.display = 'none'; // Hide after a few seconds
+            }, 2000);
+        });
+    </script>
+</body>
+</html>

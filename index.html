@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <video autoplay muted loop id="bg-video">
+        <source src="loginvideo.mp4" type="video/mp4">
+        Your browser does not support the video.
+    </video>
+
+    <div class="login-container">
+        <form id="loginForm" class="login-form">
+            <h2>Login</h2>
+            <label>Email:</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <label>Password:</label>
+            <input type="password" id="password" placeholder="Enter your password" required>
+
+            <button type="submit">Login</button>
+            <p>Forget password?</p>
+        </form>
+    </div>
+
+    <!-- <script>
+        const form = document.getElementById('loginForm');
+
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            const response = await fetch('http://localhost:5000/api/users/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email, password })
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                alert('User registered successfully');
+            } else {
+                alert(`Error: ${data.error}`);
+            }
+        });
+    </script> -->
+
+    
+    <script>
+    const form = document.getElementById('loginForm');
+
+    form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+
+
+        // Redirect to dashboard
+        window.location.href = "dashboard1/index.html";
+    });
+</script>
+
+</body>
+</html>

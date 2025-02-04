@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard | Squid Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation"></script>
+
+</head>
+<body class="bg-dark text-white">
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">SQUID GAME CTF</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="challenges.html">Challenges</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="leaderboard.html">Leaderboard</a></li>
+                    <li class="nav-item"><button class="btn btn-dark">Sign Out</button></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="chart-container">
+        <canvas id="leaderboardChart"></canvas>
+    </div>
+    
+
+    <!-- Leaderboard Table -->
+    <div class="container mt-4">
+        <h2 class="text-center text-danger fw-bold">Leaderboard</h2>
+
+        <table class="table table-dark table-striped table-bordered mt-4">
+            <thead class="table-danger">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Team Name</th>
+                    <th scope="col">Points</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Red Warriors</td>
+                    <td>1500</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Masked Hunters</td>
+                    <td>1200</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Survival Squad</td>
+                    <td>1000</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>Elite Players</td>
+                    <td>800</td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>Last Hope</td>
+                    <td>600</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+   <script>
+    // Sample Data: Players and Their Points Over Time
+const playerData = {
+    labels: ["Round 1", "Round 2", "Round 3", "Round 4", "Round 5", "Round 6", "Final"], // 7 rounds
+    datasets: [
+        {
+            label: "Player 1",
+            data: [10, 25, 35, 50, 60, 70, 90],  
+            borderColor: "#FF2525", 
+            backgroundColor: "rgba(255, 37, 37, 0.2)",
+            borderWidth: 2
+        },
+        {
+            label: "Player 2",
+            data: [15, 30, 40, 55, 65, 75, 85],
+            borderColor: "#1ABF8E", 
+            backgroundColor: "rgba(26, 191, 142, 0.2)",
+            borderWidth: 2
+        }
+    ]
+};
+
+
+// Get the Chart Context
+const ctx = document.getElementById('leaderboardChart').getContext('2d');
+
+const leaderboardChart = new Chart(ctx, {
+    type: 'line',
+    data: playerData,
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            title: {
+                display: true,
+                text: "Leaderboard Progress",
+                color: "#fff",
+                font: { size: 18 }
+            },
+            legend: {
+                labels: { color: "#fff" }
+            },
+            annotation: { // Plugin for highlighting lines
+                annotations: [
+                    { type: "line", mode: "vertical", scaleID: "x", value: "Round 4", borderColor: "#D90452", borderWidth: 3 },
+                    { type: "line", mode: "vertical", scaleID: "x", value: "Round 6", borderColor:" #D90452", borderWidth: 3 },
+                    { type: "line", mode: "vertical", scaleID: "x", value: "Final", borderColor: "#D90452", borderWidth: 3 }
+                ]
+            }
+        },
+        scales: {
+            x: {
+                ticks: { color: "#fff" },
+                grid: { color: "#555" }
+            },
+            y: {
+                ticks: { color: "#fff" },
+                grid: { color: "#555" }
+            }
+        }
+    },
+    
+});
+
+   </script>
+</body>
+</html>

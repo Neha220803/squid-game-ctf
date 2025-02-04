@@ -1,0 +1,290 @@
+/* General Styling */
+@font-face {
+    font-family: 'SquidGameFont'; /* Custom name for your font */
+    src: url('fonts/squidgamefont.ttf') format('truetype');
+    font-weight: 1px;
+    font-style: normal;
+}
+
+/* Apply the font to the body and other elements */
+body {
+    font-family: 'SquidGameFont', sans-serif;
+}
+
+.navbar, .btn {
+    font-family: 'SquidGameFont', sans-serif;
+    font-size: 12px;
+   text-transform: uppercase;
+}
+
+p{
+    font-size:13px;
+}
+h1,h2,h3{
+    font-size:28px;
+}
+
+
+/* Navbar */
+.navbar {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    background-color: #C1055B;
+}
+
+
+/* Challenges Section */
+.challenge-section {
+    margin-top: 40px;
+}
+
+.challenge-heading {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color:  #C1055B;
+}
+
+/* Card Styles */
+.cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.card {
+    background-color: transparent;
+    border: 3px solid #008080;
+    border-radius: 10px;
+    width: 220px;  /* Card width */
+    height: 150px; /* Card height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 0 15px #008080
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px #008080;
+}
+
+/* Easy Challenge Layout */
+.easy .cards-wrapper {
+    justify-content: start;
+}
+
+.easy .card {
+    width: calc(25% - 20px); /* 4 cards in a row, with space between */
+}
+
+/* Medium Challenge Layout */
+.medium .cards-wrapper {
+    justify-content: start;
+}
+
+.medium .card {
+    width: calc(25% - 20px); /* 2 cards in the middle */
+}
+
+/* Hard Challenge Layout */
+.hard .cards-wrapper {
+    justify-content: start;
+}
+
+.hard .card {
+    width: calc(60% - 20px); /* 1 card, taking full width */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .easy .card {
+        width: calc(50% - 20px); /* 2 cards in a row on medium screens */
+    }
+}
+
+@media (max-width: 992px) {
+    .easy .card {
+        width: calc(50% - 20px); /* 2 cards in a row on smaller screens */
+    }
+    .medium .card {
+        width: calc(50% - 20px); /* 1 card in the row on small screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .easy .card {
+        width: 80%; 
+        margin-left:50px;/* 1 card per row on small screens */
+    }
+    .medium .card {
+        width: 80%; /* 1 card per row on small screens */
+    }
+    .hard .card {
+        width: 80%; /* 1 card per row on small screens */
+    }
+    .modal-dialog{
+        margin-top:35%;
+    }
+}
+
+@media (max-width: 576px) {
+    .easy .card {
+        width: 100%; /* 1 card per row on very small screens */
+    }
+    .medium .card {
+        width: 100%; /* 1 card per row on very small screens */
+    }
+    .hard .card {
+        width: 100%; /* 1 card per row on very small screens */
+    }
+    .modal-dialog{
+        margin-top:55%;
+    }
+}
+
+/* Custom Modal Styles */
+.modal-content{
+    height:500px;
+    width: 400px;
+    background-color: #101010; /* Dark background */
+    border: 1px solid #FF075D; /* Squid Game Pink Border */
+    border-radius: 12px;
+    box-shadow: 0 0 15px  #D90452; /* Neon Glow Effect */
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+}
+.modal-title {
+    font-family: 'SquidGameFont', sans-serif;
+    color: #FF075D;
+    font-size: 24px;
+    text-shadow: 0 0 8px #FF075D;
+    margin-left:15%;
+}
+
+.modal-dialog{
+    height:500px;
+    background-color: #e7e4e3;
+    margin-top: 10%;
+    width:400px;
+    border-radius: 10px;
+    border:none
+}
+.modal-body {
+    font-family: 'SquidGameFont', sans-serif;
+    font-size: 18px;
+    color: #ffffff;
+    padding: 20px;
+
+}
+.modal{
+    background-color:transparent;
+}
+/* Modal Buttons */
+.btn-primary {
+    background-color: #FF075D; /* Squid Game Pink */
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    text-transform: uppercase;
+    transition: 0.3s ease-in-out;
+}
+.btn-success{
+    background-color: #7d0f36;
+    border: none;
+
+}
+.btn-success:hover{
+    background-color: #971442
+}
+.btn-primary:hover {
+    background-color: #D90452; /* Darker Pink */
+    box-shadow: 0 0 15px #FF075D;
+}
+.btn-close {
+    filter: invert(1); /* Makes it white */
+}
+/* Input Fields */
+.input-group input {
+    background-color: #fafafa;
+    border: 1px solid  #D90452;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    font-family: monospace;
+    
+}
+
+.input-group input:focus {
+    box-shadow: 0 0 10px  #D90452;
+    outline: none;
+}
+#statusMessage {
+    font-size: 16px;
+    text-align: center;
+}
+
+
+.btn-warning{
+    font-size:'SquidGameFont', sans-serif;
+}
+
+.phrase{
+    font-size:15px;
+    color:#D90452
+}
+/* Leaderboard Table */
+.table th, .table td {
+    text-align: center;
+    font-size: 18px;
+}
+.chart-container {
+    width: 80%; /* The graph covers 80% of the page */
+    height: 400px; /* Fixed height */
+    max-width: 800px; /* Optional: Prevent too large graphs */
+    margin: auto; /* Centering */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 10px #D90452;
+    margin-top: 30px;
+    padding: 10px;
+}
+
+#leaderboardChart {
+    width: 100%; /* Takes full width of the container */
+    height: 100%; /* Takes full height */
+}
+
+
+
+/* Custom Colors */
+.text-danger {
+    color:#C1055B !important;
+}
+.bg-danger {
+    background-color:#C1055B !important;
+}
+.table tbody tr:hover {
+    background-color: rgba(255, 30, 0, 0.3);
+    cursor: pointer;
+}
+.btn-dark:hover {
+    box-shadow: 0 0 15px #ff1e00;
+}
+
