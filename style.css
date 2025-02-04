@@ -1,0 +1,276 @@
+@import url("https://fonts.cdnfonts.com/css/game-of-squids");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Game Of Squids", sans-serif;
+  text-decoration: none;
+}
+body {
+  background: linear-gradient(296.18deg, #e40556, #000000);
+  /* height: 100vh; */
+}
+.logo {
+  width: 200px;
+  position: relative;
+}
+
+
+nav {
+  margin: 0 10%;
+}
+
+.bar {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+.container{
+  width: 100%;
+  right: 1;
+}
+.background-clip{
+    position: absolute;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transform: translateX(0%); 
+}
+.menu-bar{
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+.nav-links a {
+  color: #fff;
+  padding: 0 15px;
+}
+.nav-links a:hover {
+  color: #141c95;
+}
+.btn {
+  background: linear-gradient(90deg, #eb1656 28.48%, #ae1b76 72.96%);
+  border-radius: 5px;
+  padding: 15px 30px;
+  color: #ffff;
+  border-color: linear-gradient(90deg, #eb1656 28.48%, #ae1b76 72.96%);
+  transition: 0.5s;
+}
+.menu-bar .btn{
+  margin-left: 6rem;
+}
+.btn:hover {
+  background: transparent;
+  border: 2px solid #eb1656;
+}
+main {
+  margin: 0px 10%;
+}
+.hero-sec {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero {
+  width: 400px;
+}
+.hero-sec h2 {
+  font-size: 40px;
+  background: linear-gradient(270deg, #d53443 59.64%, #141c95 75.94%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  /* text-fill-color: transparent; */
+}
+.hero-sec h1 {
+  color: #fff;
+  font-size: 90px;
+}
+.hero-sec p {
+  font-size: 20px;
+  line-height: 34px;
+  color: #ffffff;
+  width: 400px;
+  margin-bottom: 30px;
+}
+.hero-sec .cap {
+  font-size: 30px;
+  line-height: 34px;
+  color: white;
+  text-align: center;
+}
+footer {
+  margin: 0 100px;
+}
+.lastimg {
+  width: 100px;
+}
+
+footer .last {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.last h1 {
+  font-size: 50px;
+  line-height: 80px;
+  text-align: center;
+  letter-spacing: 1em;
+  color: white;
+}
+
+@media only screen and (max-width: 891px) {
+  nav {
+    margin: 0;
+  }
+  .bar {
+    flex-direction: column;
+  }
+
+  .menu-bar{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+  }
+  .nav-links {
+    margin-bottom: 20px;
+  }
+  
+  .hamburger-menu {
+    height: 30px;
+    width: 35px;
+    position: relative;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 4;
+  }
+
+  .ham-bar {
+    width: 70%;
+    height: 4px;
+    background-color: #ffff;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.6s, opacity 0.8s, top 0.6s;
+  }
+
+  .bar-top {
+    top: 25%;
+  }
+  .bar-bottom {
+    top: 75%;
+  }
+  .hamburger-menu.active .bar-top {
+    transform: translate(-50%, -50%) rotate(-315deg);
+    top: 50%;
+  }
+  .hamburger-menu.active .bar-mid {
+    opacity: 0;
+  }
+  .hamburger-menu.active .bar-bottom {
+    transform: translate(-50%, -50%) rotate(-225deg);
+    top: 50%;
+  }
+  #nav-links {
+    position: fixed;
+    top: 0;
+    left: -75%;
+    height: 100vh;
+    width: 38%;
+    transition: 0.5s;
+    background: #eb1656;
+    text-align: left;
+    z-index: 2;
+  }
+  #nav-links a {
+    padding: 30px 20px;
+  }
+ #nav-links a:first-child{
+  margin-top: 120px;
+ }
+  #nav-links.active {
+    left: 0;
+  }
+  #nav-links a {
+    display: block;
+  }
+  .menu-bar .btn{
+    margin-left: 20rem;
+  }
+  .hero-sec {
+    flex-direction: column;
+  }
+  .hero-sec p,
+  h1,
+  h2 {
+    text-align: center;
+  }
+
+  .hero-sec .btn {
+    margin-left: 100px;
+  }
+  footer .last {
+    justify-content: space-evenly;
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  .menu-bar .btn{
+    margin-left: 10rem;
+  }
+}
+@media only screen and (max-width: 515px) {
+  .logo {
+    width: 80px;
+  }
+  .nav-links a {
+    font-size: 12px;
+  }
+  .btn {
+    border-radius: 10px;
+    padding-left: 215px;
+    font-size: 14px;
+  }
+  .hero {
+    width: 300px;
+  }
+  
+  .hero-sec h2 {
+    font-size: 24px;
+  }
+  .hero-sec h1 {
+    font-size: 40px;
+  }
+  .hero-sec p {
+    font-size: 14px;
+    line-height: 20px;
+    width: 300px;
+    margin-bottom: 20px;
+  }
+  .hero-sec .cap {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .hero-sec .btn {
+    margin-left: 80px;
+  }
+  .lastimg {
+    width: 60px;
+  }
+
+  footer .last {
+    justify-content: space-evenly;
+  }
+  .last h1 {
+    font-size: 25px;
+    line-height: 30px;
+  }
+  
+}

@@ -1,74 +1,80 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="login.css">
-</head>
-<body>
-    <video autoplay muted loop id="bg-video">
-        <source src="loginvideo.mp4" type="video/mp4">
-        Your browser does not support the video.
-    </video>
-
-    <div class="login-container">
-        <form id="loginForm" class="login-form">
-            <h2>Login</h2>
-            <label>Email:</label>
-            <input type="email" id="email" placeholder="Enter your email" required>
-
-            <label>Password:</label>
-            <input type="password" id="password" placeholder="Enter your password" required>
-
-            <button type="submit">Login</button>
-            <p>Forget password?</p>
-        </form>
-    </div>
-
-    <!-- <script>
-        const form = document.getElementById('loginForm');
-
-        form.addEventListener('submit', async (event) => {
-            event.preventDefault();
-
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-
-            const response = await fetch('http://localhost:5000/api/users/register', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ email, password })
-            });
-
-            const data = await response.json();
-
-            if (response.ok) {
-                alert('User registered successfully');
-            } else {
-                alert(`Error: ${data.error}`);
-            }
-        });
-    </script> -->
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Squid Game</title>
+    <link rel="stylesheet" href="style.css" />
     
-    <script>
-    const form = document.getElementById('loginForm');
+  </head>
+  <body>
+    <nav>
+      <div class="bar">
+        <div>
+          <img src="Engg Logo1.png" alt="" class="logo" />
+        </div>
+        
+        <div class="container">
+            <video autoplay muted loop class="background-clip" audio="true" volume="0.5">
+                <source src="c:\Users\welcome\Downloads\landing page (1)(1) (online-video-cutter.com).mp4" type="video/mp4">
+            </video>
+               
+        <div class="menu-bar">
+          <div class="hamburger-menu">
+            <div class="ham-bar bar-top"></div>
+            <div class="ham-bar bar-mid"></div>
+            <div class="ham-bar bar-bottom"></div>
+          </div>
+          <div class="nav-links" id="nav-links">
+            <a href="">Home</a>
+            <a href="">About</a>
+            <a href="#">Prizes</a>
+            <a href="">Timeline</a>
+            
+            <a href="">contact us</a>
+          </div>
+          <div>
+            <a href="https://forms.gle/W1o1LvrHRkNGdokX6" class="btn">sign up</a>
+          </div>
+        </div>
+        </div>
+      </div>
+    </nav>
 
-    form.addEventListener('submit', async (event) => {
-        event.preventDefault();
+    <main>
+      <div class="hero-sec">
+        <div class="text">
+          <h2>Welcome To The CTF Event</h2>
+          <h1>BATTLE</h1>
+          <p>
+            BE FAST, BE SLOW, TAKE UP, TAKE DOWN, TAKE RIGHT, TAKE LEFT. PLAY
+            HARD, PLAY NICE
+          </p>
+          <a href="login/index.html" class="btn">PROCEED</a>
+        </div>
+        
+        <div>
+          <img src="hero-img.png" alt="" class="hero" />
+          <p class="cap">stay alive or stay human</p>
+        </div>
+      </div>
+    </main>
 
-        const email = document.getElementById('email').value;
-        const password = document.getElementById('password').value;
+    <footer>
+      <div class="last">
+        <div>
+          <img src="squid.png" alt="" class="lastimg" />
+        </div>
+        <div>
+          <h1>alive</h1>
+        </div>
+      </div>
+    </footer>
 
-
-        // Redirect to dashboard
-        window.location.href = "dashboard1/index.html";
-    });
-</script>
+    <script src="script.js"></script>
+  </body>
 
 </body>
 </html>
+
