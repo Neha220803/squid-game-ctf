@@ -190,8 +190,14 @@ h1 {
 @media (max-width: 768px) {
     .hero-sec h1 {
     font-size: 40px !important;
+    text-shadow: 0 0 1px #FF075D !important;
+
     }
 
+    h1{
+
+        text-shadow: 0 0 4px #FF075D !important;
+    }
     .hero-sec p {
     font-size: 14px;
     }
