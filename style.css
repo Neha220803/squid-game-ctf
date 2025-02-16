@@ -5,272 +5,463 @@
   font-family: "Game Of Squids", sans-serif;
   text-decoration: none;
 }
+
+/* General Styles */
 body {
-  background: linear-gradient(296.18deg, #e40556, #000000);
-  /* height: 100vh; */
+    background-color: #130414;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    /* padding-left: 40px !important;
+    padding-right: 40px !important; */
 }
-.logo {
-  width: 200px;
-  position: relative;
+
+section{
+  min-height: 100vh !important;
+  /* overflow: hidden; */
+}
+
+/* Navbar Styling */
+/* Center Navbar */
+
+.navbar {
+    position: fixed; /* Fix it at the top */
+    top: 30px; /* Stick to the top of the viewport */
+    left: 50%;
+    transform: translateX(-50%); /* Center it */
+    width: 90%; /* Keep its width */
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+    padding: 15px 30px;
+    border: 2px solid rgba(255, 7, 93, 0.8); /* Pink border */
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    transition: box-shadow 0.3s ease-in-out;
+    box-shadow: 0px 0px 15px rgba(255, 7, 93, 0.6);
+    z-index: 1000; /* Keep it above other elements */
+}
+
+.main-content {
+    padding-top: 100px; /* Adjust based on navbar height */
+}
+
+/* Hover Effect */
+.navbar:hover {
+    /* transform: translate(-50%, -50%) scale(1.2); */
+    box-shadow: 0px 0px 25px rgba(255, 7, 93, 0.8);
+}
+
+/* Navbar Brand (Squid Game Shapes) */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+/* Shapes Styling */
+.nav-shape {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    background-color: #008080;
+}
+
+.nav-circle {
+    border-radius: 50%;
+}
+
+.nav-triangle {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid #ff007f;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.nav-square {
+    width: 20px;
+    height: 20px;
+    background-color: #008080;
+}
+
+/* Navbar Links in the Middle */
+.navbar-nav {
+    margin: auto;
+}
+
+.navbar-nav .nav-item {
+    margin: 0 15px;
+}
+
+.navbar-nav .nav-link {
+    font-size: 18px;
+    color: white;
+    transition: 0.3s;
+    padding: 10px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #FF075D;
+    text-shadow: 0 0 8px #FF075D;
+}
+
+.hero-sec {
+    text-align: center;
+    padding: 80px 20px;
+    color: white;
+}
+
+h1 {
+    font-size: 50px;
+    color: #FF075D;
+    text-shadow: 0 0 10px #FF075D;
+}
+
+.hero-sec p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Countdown Timer */
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #D90452;
+    text-shadow: 0 0 10px #D90452;
+
 }
 
 
-nav {
-  margin: 0 10%;
+/* Register Now Button */
+.register-now {
+    display: inline-block;
+    margin-top: 20px; 
+    padding: 10px 35px;
+    background: linear-gradient(90deg, #eb1656 28.48%, #ae1b76 72.96%);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
 }
 
-.bar {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  margin: 15px 0;
+.register-now:hover {
+    background: linear-gradient(90deg, #ae1b76, #eb1656);
+    transform: scale(1.05);
+    color:white !important;
 }
-.container{
-  width: 100%;
-  right: 1;
+
+
+/* Login Button */
+/* .nav-link[href="#"] {
+    background-color: #FF075D;
+    color: black;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: 0.3s;
+    text-transform: uppercase;
 }
-.background-clip{
+
+.nav-link[href="#"]:hover {
+    background-color: #D90452;
+    box-shadow: 0 0 15px #FF075D;
+} */
+
+
+ h2 {
+    font-size: 40px;
+    /* background: linear-gradient(270deg, #d53443 59.64%, #141c95 75.94%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    color: white;
+}
+
+.hero-sec h1 {
+    font-size: 90px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+    .hero-sec h1 {
+    font-size: 40px !important;
+    }
+
+    .hero-sec p {
+    font-size: 14px;
+    }
+
+    .countdown{
+        padding: 20px !important;
+        /* margin: 20px !important; */
+        overflow: hidden !important;
+    gap: 5px;
+    font-size: 18px !important;
+    font-weight:lighter;
+
+    }
+
+    .number {
+    font-size: 16px;
+    font-weight:100 !important;
+}
+    }
+
+
+.hero-sec p {
+    font-size: 20px;
+    /* line-height: 1.5; */
+    max-width: 500px;
+     background: linear-gradient(270deg, #d53443 59.64%, #141c95 75.94%);
+    background-clip: text;
+      -webkit-text-fill-color: transparent;
+    margin: 0 auto;
+}
+
+/* Countdown Timer */
+.countdown {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.time-block {
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(255, 7, 93, 0.4);
+    padding: 10px;
+    margin: 0 10px;
+    border-radius: 8px;
+    width: 100px;
+}
+
+.number {
+    font-size: 35px;
+    font-weight: bold;
+    color: #eb1656;
+}
+
+.label {
+    font-size: 16px;
+    color: white;
+    /* margin-top: 5px; */
+}
+
+
+/* Tagline */
+  .cap {
+      font-size: 24px;
+      margin-top: 15px;
+      font-weight: bold;
+      color: white !important;
+  }
+
+.squid-doll {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    /* width: 150px;  */
+    height: 400px !important;
+    z-index: 10; 
+}
+.about-us {
+    /* background-color: #0d0d0d; */
+    color: #ffffff;
+    padding: 100px 0;
+}
+
+.about-section {
+    margin-bottom: 80px;
+}
+
+/* Text Content */
+.about-text h3 {
+    font-size: 2rem;
+    color: #ffcc00;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.about-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #cccccc;
+}
+
+/* Image Styling */
+.about-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 2;
+    border-radius: 10px;
+}
+
+/* White Blur Effect Behind Image */
+.image-bg {
     position: absolute;
     width: 100%;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    transform: translateX(0%); 
-}
-.menu-bar{
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  margin: 15px 0;
-}
-.nav-links a {
-  color: #fff;
-  padding: 0 15px;
-}
-.nav-links a:hover {
-  color: #141c95;
-}
-.btn {
-  background: linear-gradient(90deg, #eb1656 28.48%, #ae1b76 72.96%);
-  border-radius: 5px;
-  padding: 15px 30px;
-  color: #ffff;
-  border-color: linear-gradient(90deg, #eb1656 28.48%, #ae1b76 72.96%);
-  transition: 0.5s;
-}
-.menu-bar .btn{
-  margin-left: 6rem;
-}
-.btn:hover {
-  background: transparent;
-  border: 2px solid #eb1656;
-}
-main {
-  margin: 0px 10%;
-}
-.hero-sec {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.hero {
-  width: 400px;
-}
-.hero-sec h2 {
-  font-size: 40px;
-  background: linear-gradient(270deg, #d53443 59.64%, #141c95 75.94%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  /* text-fill-color: transparent; */
-}
-.hero-sec h1 {
-  color: #fff;
-  font-size: 90px;
-}
-.hero-sec p {
-  font-size: 20px;
-  line-height: 34px;
-  color: #ffffff;
-  width: 400px;
-  margin-bottom: 30px;
-}
-.hero-sec .cap {
-  font-size: 30px;
-  line-height: 34px;
-  color: white;
-  text-align: center;
-}
-footer {
-  margin: 0 100px;
-}
-.lastimg {
-  width: 100px;
+    height: 150%;
+    background: rgba(255, 255, 255, 0.15);
+    filter: blur(40px);
+    border-radius: 50%;
+    z-index: 1;
 }
 
-footer .last {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.last h1 {
-  font-size: 50px;
-  line-height: 80px;
-  text-align: center;
-  letter-spacing: 1em;
-  color: white;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-section {
+        text-align: center;
+    }
+
+    .about-image img {
+        width: 80%;
+    }
 }
 
-@media only screen and (max-width: 891px) {
-  nav {
-    margin: 0;
-  }
-  .bar {
-    flex-direction: column;
-  }
 
-  .menu-bar{
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    margin: 0;
-  }
-  .nav-links {
-    margin-bottom: 20px;
-  }
-  
-  .hamburger-menu {
-    height: 30px;
-    width: 35px;
-    position: relative;
-    cursor: pointer;
-    padding: 0.5rem;
-    z-index: 4;
-  }
-
-  .ham-bar {
-    width: 70%;
-    height: 4px;
-    background-color: #ffff;
-    border-radius: 25px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: transform 0.6s, opacity 0.8s, top 0.6s;
-  }
-
-  .bar-top {
-    top: 25%;
-  }
-  .bar-bottom {
-    top: 75%;
-  }
-  .hamburger-menu.active .bar-top {
-    transform: translate(-50%, -50%) rotate(-315deg);
-    top: 50%;
-  }
-  .hamburger-menu.active .bar-mid {
-    opacity: 0;
-  }
-  .hamburger-menu.active .bar-bottom {
-    transform: translate(-50%, -50%) rotate(-225deg);
-    top: 50%;
-  }
-  #nav-links {
-    position: fixed;
-    top: 0;
-    left: -75%;
-    height: 100vh;
-    width: 38%;
-    transition: 0.5s;
-    background: #eb1656;
-    text-align: left;
-    z-index: 2;
-  }
-  #nav-links a {
-    padding: 30px 20px;
-  }
- #nav-links a:first-child{
-  margin-top: 120px;
- }
-  #nav-links.active {
-    left: 0;
-  }
-  #nav-links a {
-    display: block;
-  }
-  .menu-bar .btn{
-    margin-left: 20rem;
-  }
-  .hero-sec {
-    flex-direction: column;
-  }
-  .hero-sec p,
-  h1,
-  h2 {
+/*prizes*/
+.prize:hover {
+            transform: scale(1.1);
+            transition: 0.5s ease-in-out;
+        }
+        .prize img {
+            height: auto;
+            border-radius: 10px;
+        }
+        .gold img {
+            width: 450px; /* Bigger Gold Medal */
+        }
+        .silver img, .bronze img {
+            width: 350px; /* Same size for Silver & Bronze */
+        }
+        .prize h2 {
+            margin-top: 10px;
+            font-size: 1.8em;
+        }
+        .prize p {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #ff4757;
+        }
+        .game-symbol {
+            font-size: 2.5em;
+        }
+    
+/* Organizers Section */
+#organizers {
+    padding: 60px 0;
+    color: #ff007f;
     text-align: center;
-  }
-
-  .hero-sec .btn {
-    margin-left: 100px;
-  }
-  footer .last {
-    justify-content: space-evenly;
-  }
 }
 
-@media only screen and (max-width: 530px) {
-  .menu-bar .btn{
-    margin-left: 10rem;
-  }
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 40px;
 }
-@media only screen and (max-width: 515px) {
-  .logo {
-    width: 80px;
-  }
-  .nav-links a {
-    font-size: 12px;
-  }
-  .btn {
-    border-radius: 10px;
-    padding-left: 215px;
-    font-size: 14px;
-  }
-  .hero {
-    width: 300px;
-  }
-  
-  .hero-sec h2 {
-    font-size: 24px;
-  }
-  .hero-sec h1 {
-    font-size: 40px;
-  }
-  .hero-sec p {
-    font-size: 14px;
-    line-height: 20px;
-    width: 300px;
-    margin-bottom: 20px;
-  }
-  .hero-sec .cap {
-    font-size: 12px;
-    line-height: 18px;
-  }
-  .hero-sec .btn {
-    margin-left: 80px;
-  }
-  .lastimg {
-    width: 60px;
-  }
 
-  footer .last {
-    justify-content: space-evenly;
-  }
-  .last h1 {
-    font-size: 25px;
-    line-height: 30px;
-  }
-  
+/* Organizer Container */
+.organizer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.shape img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Shapes */
+.shape {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+/* Square Shape */
+.square {
+    background-color: transparent;
+    /* clip-path: inset(0% 0% 0% 0%); */
+}
+
+/* Triangle Shape */
+.triangle {
+    background-color: transparent;
+    /* clip-path: polygon(50% 0%, 0% 100%, 100% 100%); */
+}
+
+/* Circle Shape */
+.circle {
+    background-color: transparent;
+    /* border-radius: 50%; */
+}
+
+/* Image Inside Shape */
+.shape img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Faculty VIP Special Shape */
+.vip-shape {
+    background: #ff007f;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+/* LinkedIn Links */
+a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+a:hover {
+    color: #ffcc00;
+}
+
+/* Footer */
+.footer {
+    background-color: #111; /* Dark background */
+    color: #008080; /* Squid Game pink */
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 36px; /* Reduce size for mobile */
+    }
+
+    h2 {
+        font-size: 28px; /* Smaller h2 */
+    }
+
+    p {
+        font-size: 16px; /* Slightly smaller paragraph */
+    }
 }

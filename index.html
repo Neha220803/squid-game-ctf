@@ -1,79 +1,385 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Squid Game</title>
-    <link rel="stylesheet" href="style.css" />
-    
-  </head>
-  <body>
-    <nav>
-      <div class="bar">
-        <div>
-          <img src="Engg Logo1.png" alt="" class="logo" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTF: The Squid Hunt</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+</head>
+<body>
+    <section class="">
+        <!-- <img src="./assets/images/doll.png" alt="Squid Game Doll" class="squid-doll"> -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed mx-auto">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <span class="nav-shape nav-circle"></span>
+                    <span class="nav-shape nav-triangle"></span>
+                    <span class="nav-shape"></span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#prizes">Prizes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#timeline">Timeline</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="#">Contact Us</a>
+                        </li> -->
+                    </ul>
+                    <a class="register-now" href="https://forms.gle/BgHwabjix7CtfP6B9">Login</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="main-content">
+            <div class="hero-sec">
+                <div class="text">
+                    <h2>Welcome To The CTF Event</h2>
+                    <h1>The Squid Hunt</h1>
+                    <p>Are Your Ready to play ?</p>
+                </div>
+            
+
+            <div class="countdown">
+                <div class="time-block">
+                    <div class="number" id="days">00</div>
+                    <div class="label">Days</div>
+                </div>
+                <div class="time-block">
+                    <div class="number" id="hours">00</div>
+                    <div class="label">Hours</div>
+                </div>
+                <div class="time-block">
+                    <div class="number" id="minutes">00</div>
+                    <div class="label">Min</div>
+                </div>
+                <div class="time-block">
+                    <div class="number" id="seconds">00</div>
+                    <div class="label">Sec</div>
+                </div>
+            </div>
+
+            <a href="https://forms.gle/BgHwabjix7CtfP6B9" class="register-now">Register Now</a>
+            <!-- <p class="cap">stay alive or stay human</p> -->
+        </div>
+        </div>
+      </section>
+     <section class="about-us" id="about">
+      <div class="container">
+
+      
+    <div class="row align-items-center about-section">
+      <h2 class="mb-5">
+        Event Conducted By
+      </h2>
+        <div class="col-md-6 about-text">
+            <h3>Null Student Chapter SJCE</h3>
+            <p>Null is an open security community for ethical hackers and security enthusiasts. 
+               The SJCE chapter focuses on fostering a security mindset, hosting workshops, and CTF challenges.</p>
+        </div>
+        <div class="col-md-6 position-relative about-image">
+            <div class="image-bg"></div>
+            <img src="assets/images/null.png" alt="Null Chapter Logo" class="img-fluid">
+        </div>
+    </div>
+
+    <div class="row align-items-center about-section flex-md-row-reverse">
+        <div class="col-md-6 about-text">
+            <h3>OWASP SJCE Student Chapter</h3>
+            <p>OWASP SJCE is a student-driven chapter dedicated to cybersecurity awareness and research. 
+               It provides students with hands-on experience in application security and ethical hacking.</p>
+        </div>
+        <div class="col-md-6 position-relative about-image">
+            <div class="image-bg"></div>
+            <img src="assets/images/owasp.png" alt="OWASP Chapter Logo" class="img-fluid">
+        </div>
+    </div>
+    </div>
+</section>
+
+<section class="text-center" id="prizes">
+  <div class="container">
+    <h1>🦑 Prizes 🦑</h1>
+    <h3 class="mb-5">May the best player win it...</h3>
+
+    <div class="row justify-content-center">
+        <div class="col-4 prize bronze">
+            <div class="game-symbol"></div>
+            <img src="./assets/images/prize-bronze.png" alt="3rd Prize" class="img-fluid">
+            <h2>3rd Prize</h2>
+            <p>₹ 1,000</p>
         </div>
         
-        <div class="container">
-            <video autoplay muted loop class="background-clip" audio="true" volume="0.5">
-                <source src="c:\Users\welcome\Downloads\landing page (1)(1) (online-video-cutter.com).mp4" type="video/mp4">
-            </video>
-               
-        <div class="menu-bar">
-          <div class="hamburger-menu">
-            <div class="ham-bar bar-top"></div>
-            <div class="ham-bar bar-mid"></div>
-            <div class="ham-bar bar-bottom"></div>
-          </div>
-          <div class="nav-links" id="nav-links">
-            <a href="">Home</a>
-            <a href="">About</a>
-            <a href="#">Prizes</a>
-            <a href="">Timeline</a>
-            
-            <a href="">contact us</a>
-          </div>
-          <div>
-            <a href="https://forms.gle/W1o1LvrHRkNGdokX6" class="btn">sign up</a>
-          </div>
+        <div class="col-4 prize gold">
+            <div class="game-symbol"></div>
+            <img src="./assets/images/prize-gold.png" alt="1st Prize" class="img-fluid">
+            <h2>1st Prize</h2>
+            <p>₹ 5,000</p>
         </div>
-        </div>
-      </div>
-    </nav>
 
-    <main>
-      <div class="hero-sec">
-        <div class="text">
-          <h2>Welcome To The CTF Event</h2>
-          <h1>BATTLE</h1>
-          <p>
-            BE FAST, BE SLOW, TAKE UP, TAKE DOWN, TAKE RIGHT, TAKE LEFT. PLAY
-            HARD, PLAY NICE
-          </p>
-          <a href="login/index.html" class="btn">PROCEED</a>
+        <div class="col-4 prize silver">
+            <div class="game-symbol"></div>
+            <img src="./assets/images/prize-silver.png" alt="2nd Prize" class="img-fluid">
+            <h2>2nd Prize</h2>
+            <p>₹ 2,000</p>
         </div>
-        <div>
-          <img src="hero-img.png" alt="" class="hero" />
-          <p class="cap">stay alive or stay human</p>
-        </div>
-      </div>
-    </main>
+    </div>
 
-    <footer>
-      <div class="last">
-        <div>
-          <img src="squid.png" alt="" class="lastimg" />
-        </div>
-        <div>
-          <h1>alive</h1>
-        </div>
-      </div>
-    </footer>
+  </div>
+    
+</section>
 
-    <script src="script.js"></script>
-  </body>
+<section id="timeline" class="timeline-section">
+  
+  <div class="container justify-content-center">
+    <h1 class="text-start">Event Timeline</h1>
+    <div class="row justify-content-center">
+       <img class="image-fluid py-2" src="./assets/images/timeline.png" alt="Event Timeline Image" style="width: 90%;"  />
 
+    </div>
+   
+
+
+  </div>
+  
+
+</section>
+
+<section class="container text-center" id="organizers">
+    <h1>🔺 Organizers ⭕</h1>
+
+     <div class="row justify-content-center">
+        <!-- VIP (Faculty Coordinator) -->
+        <div class="col-3 organizer vip">
+            <div class="shape">
+                <img src="./assets/images/officer.png" alt="Faculty Coordinator">
+            </div>
+            <h3>Faculty Coordinator</h3>
+            <!-- <a href="https://www.linkedin.com/in/faculty" target="_blank">LinkedIn</a> -->
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <!-- Square (First Row) -->
+        <div class="col-3 organizer">
+            <div class="shape">
+                <img src="./assets/images/square.png" class="image-fluid img-ss" alt="Organizer 1">
+            </div>
+            <h3>Neeharika S</h3>
+            <!-- <a href="https://www.linkedin.com/in/organizer1" target="_blank">LinkedIn</a> -->
+        </div>
+
+        <div class="col-3 organizer">
+            <div class="shape">
+                <img src="./assets/images/square.png" class="image-fluid img-ss" alt="Organizer 2">
+            </div>
+            <h3>Mariappan</h3>
+            <!-- <a href="https://www.linkedin.com/in/organizer2" target="_blank">LinkedIn</a> -->
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <!-- Triangle (Second Row) -->
+        <div class="col-3 organizer">
+            <div class="shape">
+                <img src="./assets/images/triangle.png" class="image-fluid img-ss" alt="Organizer 3">
+            </div>
+            <h3>Mayilan</h3>
+            <!-- <a href="https://www.linkedin.com/in/organizer3" target="_blank">LinkedIn</a> -->
+        </div>
+
+        <div class="col-3 organizer">
+            <div class="shape">
+                <img src="./assets/images/triangle.png" class="image-fluid img-ss" alt="Organizer 4">
+            </div>
+            <h3>Kannan</h3>
+            <!-- <a href="https://www.linkedin.com/in/organizer4" target="_blank">LinkedIn</a> -->
+        </div>
+
+        <div class="col-3 organizer">
+            <div class="shape">
+                <img src="./assets/images/triangle.png" class="image-fluid img-ss" alt="Organizer 4">
+            </div>
+            <h3>Naveen</h3>
+            <!-- <a href="https://www.linkedin.com/in/organizer4" target="_blank">LinkedIn</a> -->
+        </div>
+    </div>
+
+    <section class="container">
+    <div class="row justify-content-center">
+        <div class="col-2 organizer">
+            <div class="shape">
+                <img src="./assets/images/circle.png" class="img-fluid img-ss" alt="Organizer 5">
+            </div>
+            <h3>Jaivanti</h3>
+        </div>
+
+        <div class="col-2 organizer">
+            <div class="shape">
+                <img src="./assets/images/circle.png" class="img-fluid img-ss" alt="Organizer 6">
+            </div>
+            <h3>Jude Sahai</h3>
+        </div>
+
+        <div class="col-2 organizer">
+            <div class="shape">
+                <img src="./assets/images/circle.png" class="img-fluid img-ss" alt="Organizer 5">
+            </div>
+            <h3>Kesava Moorthi</h3>
+        </div>
+
+        <div class="col-2 organizer">
+            <div class="shape">
+                <img src="./assets/images/circle.png" class="img-fluid img-ss" alt="Organizer 6">
+            </div>
+            <h3>Joel</h3>
+        </div>
+
+        <div class="col-2 organizer">
+            <div class="shape">
+                <img src="./assets/images/circle.png" class="img-fluid img-ss" alt="Organizer 5">
+            </div>
+            <h3>Jai Aakash SB</h3>
+        </div>
+
+        <div class="col-2 organizer">
+            <div class="shape">
+                <img src="./assets/images/circle.png" class="img-fluid img-ss" alt="Organizer 6">
+            </div>
+            <h3>Akshaya M</h3>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-2 organizer">
+            <div class="shape">
+                <img src="./assets/images/circle.png" class="img-fluid img-ss" alt="Organizer 5">
+            </div>
+            <h3>Darshini S</h3>
+        </div>
+
+        <div class="col-2 organizer">
+            <div class="shape">
+                <img src="./assets/images/circle.png" class="img-fluid img-ss" alt="Organizer 6">
+            </div>
+            <h3>Anto Jerome</h3>
+        </div>
+
+        <div class="col-2 organizer">
+            <div class="shape">
+                <img src="./assets/images/circle.png" class="img-fluid img-ss" alt="Organizer 5">
+            </div>
+            <h3>Rahul M</h3>
+        </div>
+
+        <div class="col-2 organizer">
+            <div class="shape">
+                <img src="./assets/images/circle.png" class="img-fluid img-ss" alt="Organizer 6">
+            </div>
+            <h3>Surya Prasanth</h3>
+        </div>
+
+        <div class="col-2 organizer">
+            <div class="shape">
+                <img src="./assets/images/circle.png" class="img-fluid img-ss" alt="Organizer 5">
+            </div>
+            <h3>Samson Enoch</h3>
+        </div>
+
+        <div class="col-2 organizer">
+            <div class="shape">
+                <img src="./assets/images/circle.png" class="img-fluid img-ss" alt="Organizer 6">
+            </div>
+            <h3>Joel</h3>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <h2 class="text-start my-5">Developers:</h2>
+        <div class="col-2 organizer">
+            <div class="shape">
+                <img src="./assets/images/circle.png" class="img-fluid img-ss" alt="Organizer 5">
+            </div>
+            <h3>Komathi</h3>
+        </div>
+
+        <div class="col-2 organizer">
+            <div class="shape">
+                <img src="./assets/images/circle.png" class="img-fluid img-ss" alt="Organizer 6">
+            </div>
+            <h3>Shalom</h3>
+        </div>
+
+        <div class="col-2 organizer">
+            <div class="shape">
+                <img src="./assets/images/circle.png" class="img-fluid img-ss" alt="Organizer 6">
+            </div>
+            <h3>Niranjani</h3>
+        </div>
+
+        <div class="col-2 organizer">
+            <div class="shape">
+                <img src="./assets/images/circle.png" class="img-fluid img-ss" alt="Organizer 5">
+            </div>
+            <h3>Kavya</h3>
+        </div>
+
+        <div class="col-2 organizer">
+            <div class="shape">
+                <img src="./assets/images/circle.png" class="img-fluid img-ss" alt="Organizer 6">
+            </div>
+            <h3>Jemina</h3>
+        </div>
+
+        
+        
+    </div>
+</section>
+
+   
+</section>
+
+<footer class="footer">
+    <p>&copy; CTF: The Squid Hunt Event | All Rights Reserved</p>
+</footer>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const countDownDate = new Date("March 14, 2025 09:30:00").getTime();
+
+        
+      function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = countDownDate - now;
+
+    const days = String(Math.floor(distance / (1000 * 60 * 60 * 24))).padStart(2, '0');
+    const hours = String(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
+    const minutes = String(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
+    const seconds = String(Math.floor((distance % (1000 * 60)) / 1000)).padStart(2, '0');
+
+    document.getElementById("days").textContent = days;
+    document.getElementById("hours").textContent = hours;
+    document.getElementById("minutes").textContent = minutes;
+    document.getElementById("seconds").textContent = seconds;
+}
+
+setInterval(updateCountdown, 1000);
+
+      </script>
 </body>
 </html>
-
