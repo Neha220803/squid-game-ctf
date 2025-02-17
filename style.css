@@ -16,6 +16,18 @@ body {
     padding-right: 40px !important; */
 }
 
+.header-wrapper {
+    height: 100vh;
+    scroll-snap-type: y mandatory; 
+    scroll-behavior: smooth;
+}
+
+/* Ensure the header aligns with snapping */
+header {
+    height: 100vh;
+    scroll-snap-align: center;
+}
+
 section{
   min-height: 100vh !important;
   /* overflow: hidden; */
@@ -281,7 +293,7 @@ h1 {
 }
 
 .about-section {
-    margin-bottom: 80px;
+    margin-bottom: 40px;
 }
 
 /* Text Content */
