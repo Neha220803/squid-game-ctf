@@ -150,7 +150,6 @@ h1 {
 /* Register Now Button */
 .register-now {
     display: inline-block;
-    margin-top: 20px; 
     padding: 10px 35px;
     background: linear-gradient(90deg, #eb1656 28.48%, #ae1b76 72.96%);
     color: white;

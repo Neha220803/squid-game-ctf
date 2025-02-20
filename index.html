@@ -16,11 +16,11 @@
     />
 </head>
 <body>
-    <div class="header-wrapper">
-    <header class="">
+    <div class="header-wrapper" id="home">
+    <header class="" >
         <!-- <img src="./assets/images/doll.png" alt="Squid Game Doll" class="squid-doll"> -->
-        <nav class="navbar navbar-expand-lg navbar-dark fixed mx-auto">
-            <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed mx-auto d-flex align-items-center">
+            <div class="container-fluid ">
                 <a class="navbar-brand" href="#">
                     <span class="nav-shape nav-circle"></span>
                     <span class="nav-shape nav-triangle"></span>
@@ -29,10 +29,10 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="collapse navbar-collapse " id="navbarNav">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Home</a>
+                            <a class="nav-link" href="#home">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#about">About</a>
@@ -80,7 +80,7 @@
                 </div>
             </div>
 
-            <a href="https://forms.gle/BgHwabjix7CtfP6B9" class="register-now">Register Now</a>
+            <a href="https://forms.gle/BgHwabjix7CtfP6B9" class="register-now mt-3">Register Now</a>
             <!-- <p class="cap">stay alive or stay human</p> -->
         </div>
         </div>
@@ -133,28 +133,41 @@
     <h1  data-aos="fade-up" data-aos-delay="100">🦑 Prizes 🦑</h1>
     <h4 class="mb-5"  data-aos="fade-up" data-aos-delay="200">Cash Prizes + Internship Opportunities</h4>
     <div class="row justify-content-center">
-        <div class="col-4 prize silver"  data-aos="fade-up" data-aos-delay="1000">
+        <div class="col-4 prize silver d-none d-md-block"  data-aos="fade-up" data-aos-delay="1000">
             <div class="game-symbol"></div>
             <img src="./assets/images/prize-silver.png" alt="2nd Prize" class="img-fluid">
             <h2>2nd Prize</h2>
             <p>₹ 3,000</p>
         </div>
-        <div class="col-4 prize gold"  data-aos="fade-up" data-aos-delay="400">
+        <div class="col-8 col-md-4 prize gold"  data-aos="fade-up" data-aos-delay="400">
             <div class="game-symbol"></div>
             <img src="./assets/images/prize-gold.png" alt="1st Prize" class="img-fluid">
             <h2>1st Prize</h2>
             <p>₹ 5,000</p>
         </div>
-        <div class="col-4 prize bronze"  data-aos="fade-up" data-aos-delay="1400">
+        <div class="col-4 prize bronze d-none d-md-block"  data-aos="fade-up" data-aos-delay="1400">
+            <div class="game-symbol"></div>
+            <img src="./assets/images/prize-bronze.png" alt="3rd Prize" class="img-fluid">
+            <h2>3rd Prize</h2>
+            <p>₹ 2,000</p>
+        </div>
+
+        <div class="row justify-content-center d-md-none ">
+        <div class="col-6 col-md-4 prize silver" data-aos="fade-up" data-aos-delay="1000">
+            <div class="game-symbol"></div>
+            <img src="./assets/images/prize-silver.png" alt="2nd Prize" class="img-fluid">
+            <h2>2nd Prize</h2>
+            <p>₹ 3,000</p>
+        </div>
+        <div class="col-6 col-md-4 prize bronze d-md-none" data-aos="fade-up" data-aos-delay="1400">
             <div class="game-symbol"></div>
             <img src="./assets/images/prize-bronze.png" alt="3rd Prize" class="img-fluid">
             <h2>3rd Prize</h2>
             <p>₹ 2,000</p>
         </div>
     </div>
-
+    </div>
   </div>
-    
 </section>
 
 <section id="timeline" class="timeline-section">
@@ -173,7 +186,7 @@
 </section>
 
 <section class="container text-center" id="organizers">
-    <h1>🔺 Organizers ⭕</h1>
+    <h1 data-aos="fade-up" data-aos-delay="200" >🔺 Organizers ⭕</h1>
 
      <div class="row justify-content-center">
         <!-- VIP (Faculty Coordinator) -->
@@ -244,7 +257,7 @@
 
         <div class="col-4 col-lg-2 organizer " data-aos="fade-up" data-aos-delay="400">
             <div class="shape">
-                <img src="./assets/images/circle.png" class="img-fluid img-ss" alt="Organizer 6">
+                <img src="./assets/images/jude.png" class="img-fluid img-ss" alt="Organizer 6">
             </div>
             <h5>Jude Sahai</h5>
         </div>
@@ -258,7 +271,7 @@
 
         <div class="col-4 col-lg-2 organizer " data-aos="fade-up" data-aos-delay="800">
             <div class="shape">
-                <img src="./assets/images/circle.png" class="img-fluid img-ss" alt="Organizer 6">
+                <img src="./assets/images/joel.png" class="img-fluid img-ss" alt="Organizer 6">
             </div>
             <h5>Joel S</h5>
         </div>
@@ -272,7 +285,7 @@
 
         <div class="col-4 col-lg-2 organizer " data-aos="fade-up" data-aos-delay="1200">
             <div class="shape">
-                <img src="./assets/images/circle.png" class="img-fluid img-ss" alt="Organizer 6">
+                <img src="./assets/images/akshaya.png" class="img-fluid img-ss" alt="Organizer 6">
             </div>
             <h5>Akshaya M</h5>
         </div>
@@ -281,7 +294,7 @@
     <div class="row justify-content-center">
         <div class="col-4 col-lg-2 organizer" data-aos="fade-up" data-aos-delay="200">
             <div class="shape">
-                <img src="./assets/images/circle.png" class="img-fluid img-ss" alt="Organizer 5">
+                <img src="./assets/images/darshini.png" class="img-fluid img-ss" alt="Organizer 5">
             </div>
             <h5>Darshini S</h5>
         </div>
@@ -295,7 +308,7 @@
 
         <div class="col-4 col-lg-2 organizer" data-aos="fade-up" data-aos-delay="600">
             <div class="shape">
-                <img src="./assets/images/circle.png" class="img-fluid img-ss" alt="Organizer 5">
+                <img src="./assets/images/rahul.png" class="img-fluid img-ss" alt="Organizer 5">
             </div>
             <h5>Raghul M</h5>
         </div>
@@ -316,7 +329,7 @@
 
         <div class="col-4 col-lg-2 organizer" data-aos="fade-up" data-aos-delay="1200">
             <div class="shape">
-                <img src="./assets/images/circle.png" class="img-fluid img-ss" alt="Organizer 6">
+                <img src="./assets/images/rahul.png" class="img-fluid img-ss" alt="Organizer 6">
             </div>
             <h5>Dhanesh VN</h5>
         </div>
@@ -376,7 +389,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        const countDownDate = new Date("March 14, 2025 09:30:00").getTime();
+        const countDownDate = new Date("March 17, 2025 09:30:00").getTime();
 
         
       function updateCountdown() {
@@ -397,6 +410,41 @@
 setInterval(updateCountdown, 1000);
 
       </script>
+
+     <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get all nav links
+        const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+        // For each link, add a click event listener
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault(); // Prevent the default anchor click behavior
+                
+                // Get the target section's ID from the href attribute of the link
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                
+                // Scroll to the target element with an offset of -80px
+                window.scrollTo({
+                    top: targetElement.offsetTop - 135, // Adjust for 80px offset
+                    behavior: 'smooth' // Smooth scrolling
+                });
+
+                // Close the navbar in mobile view (optional)
+                const navbarCollapse = document.getElementById('navbarNav');
+                if (navbarCollapse.classList.contains('show')) {
+                    const bootstrapCollapse = new bootstrap.Collapse(navbarCollapse, {
+                        toggle: false
+                    });
+                    bootstrapCollapse.hide();
+                }
+            });
+        });
+    });
+</script>
+
+
 
       <script>
         $(document).ready(function () {
